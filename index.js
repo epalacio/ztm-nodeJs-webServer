@@ -24,6 +24,10 @@ server.on('request', (req, res) => {
         res.setHeader('Content-Type', 'text/html')
         res.write('<html>');
         res.write('<body>');
+        res.write('<ul>');
+        res.write('<li>Hello Isaac!</li>');
+        res.write('<li>What are your thoughts on Astronomy?</li>');
+        res.write('</ul>');
         res.write('</body>');
         res.write('</html>');
         res.end();
