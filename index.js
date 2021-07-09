@@ -20,8 +20,7 @@ const friends = [
 server.on('request', (req, res) => {
     //split the url to find the /parameterized url
     const items = req.url.split('/');
-    console.log(items);
-    if (items[1] === '/friends') {
+    if (items[1] === 'friends') {
         //provide a successfull response with a 200 message
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
@@ -34,7 +33,7 @@ server.on('request', (req, res) => {
             res.end(JSON.stringify(friends));
         }
         
-    } else if (items[1] === '/messages') {
+    } else if (items[1] === 'messages') {
         res.setHeader('Content-Type', 'text/html');
         res.write('<html>');
         res.write('<body>');
